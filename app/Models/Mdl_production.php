@@ -4,7 +4,12 @@ use CodeIgniter\Model;
 
 class Mdl_production extends Model
 {
-public function coba(){
-  return "model";
-}
+  public function __construct()
+  {
+    parent::__construct();
+    $this->db = db_connect();
+  }
+  public function coba(){
+    return $this->db->table('admin')->get();
+  }
 }
