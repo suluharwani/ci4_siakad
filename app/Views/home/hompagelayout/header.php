@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <title>Agency - Start Bootstrap Theme</title>
+  <title><?=$title?></title>
   <link rel="icon" type="image/x-icon" href="<?=base_url('assets/startbootstrap')?>/assets/img/favicon.ico" />
   <!-- Font Awesome icons (free version)-->
   <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
@@ -23,21 +23,22 @@
       <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="<?=base_url('assets/startbootstrap')?>/assets/img/navbar-logo.svg" alt="" /></a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
-            <div class="dropdown">
-          <li class="nav-item" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a class="nav-link js-scroll-trigger" >Download</a></li>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown">
+            <li class="nav-item" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a class="nav-link js-scroll-trigger" >Halaman</a></li>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item js-scroll-trigger" href="#services">Services</a>
+              <a class="dropdown-item js-scroll-trigger" href="#portfolio">Portfolio</a>
+              <a class="dropdown-item js-scroll-trigger" href="#about">About</a>
+              <a class="dropdown-item js-scroll-trigger" href="#team">Team</a>
+              <a class="dropdown-item js-scroll-trigger" href="#contact">Contact</a>
+              <a class="dropdown-item js-scroll-trigger" >Pendaftaran</a>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
           </div>
-        </div>
-
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" >Pendaftaran</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?=base_url('download')?>">Download</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?=base_url('pendaftaran')?>">Pendaftaran</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?=base_url('login')?>">Login</a></li>
         </ul>
       </div>
