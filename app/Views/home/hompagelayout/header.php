@@ -39,7 +39,7 @@
           </div>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?=base_url('download')?>">Download</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?=base_url('pendaftaran')?>">Pendaftaran</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?=base_url('login')?>">Login</a></li>
+          <?=$log_button?>
         </ul>
       </div>
     </div>

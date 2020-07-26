@@ -12,22 +12,38 @@ class Admin extends BaseController{
 		echo $model->coba();
 
 	}
-	public function _make_sure_is_admin(){
-		$newdata = [
-			'username'  => 'johndoe',
-			'email'     => 'johndoe@some-site.com',
-			'logged_in' => TRUE
-		];
-		$session->set($newdata);
-		if ($_SESSION['username'] != "johndoe") {
-			$this->session->sess_destroy();
-			redirect('login','refresh');
+	//----------ADMIN---------------------
+	public function admin(){
+		$data['title'] = "Siswa";
+		$data['content'] = view('siswa/content/dashboard');
+		echo view('siswa/page/dashboard', $data);
+		return $this->_make_sure_is_admin();
+	}
+	function _make_sure_is_admin(){
+		$is_user = session()->get('username_admin_web');
+		$log_status = session()->get('logged_in_admin');
+		if ($log_status != TRUE) {
+			session()->destroy();
+			return redirect()->to(site_url('logadmin'));
 		}
 	}
-	function logout(){
-		$session->sess_destroy();
-		redirect('adm','refresh');
+	//----------ADMIN END---------------------
+	//----------GURU---------------------
+	public function guru(){
+		$data['title'] = "Siswa";
+		$data['content'] = view('siswa/content/dashboard');
+		echo view('siswa/page/dashboard', $data);
+		return $this->_make_sure_is_guru();
 	}
+	function _make_sure_is_guru(){
+		$is_user = session()->get('nomor_induk_guru');
+		$log_status = session()->get('logged_in_guru');
+		if ($log_status != TRUE) {
+			session()->destroy();
+			return redirect()->to(site_url('logguru'));
+		}
+	}
+	//----------GURU END---------------------
 
 
 	//--------------------------------------------------------------------
