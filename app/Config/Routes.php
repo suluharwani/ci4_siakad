@@ -38,6 +38,7 @@ $routes->get('/logout', 'Home::logout');
 $routes->get('/siswa', 'Home::siswa');
 $routes->get('/guru', 'Admin::guru');
 $routes->get('/admin', 'Admin::admin');
+$routes->get('/staff', 'Admin::staff');
 $routes->get('/r', 'Home::hh');
 
 /**
